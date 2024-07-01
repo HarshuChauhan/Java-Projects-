@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class RockPaperScissor {
+    public static void main(String[] args) {
+        
+        System.out.println("Welcome to Rock, Paper and Scissors Game! ");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter Your Choice (Rock-0, Paper-1, Scissor-2) : ");
+        int userChoice = sc.nextInt();
+
+        int systemChoice = (int)(Math.random()*3);
+        System.out.println("system Choice : "+systemChoice);
+
+        if(userChoice == systemChoice){
+            System.out.println("<== Game Draw ==> \nBoth have same Choice ");
+        }
+        else if(userChoice == 0 && systemChoice == 1){
+            System.out.println("<== System Win ==> \n User Choice : Rock\n System Choice : Paper");
+        }
+        else if(userChoice == 1 && systemChoice == 2){
+            System.out.println("<== System Win ==> \n User Choice : Paper\n System Choice : Scissor");
+        }
+        else if(userChoice == 2 && systemChoice == 0){
+            System.out.println("<== System Win ==> \n User Choice : Scissor\n System Choice : Rock");
+        }
+        else if(userChoice == 0 && systemChoice == 2){
+            System.out.println("<== User Win ==> \n User Choice : Rock\n System Choice : Scissor");
+        }
+        else if(userChoice == 1 && systemChoice == 0){
+            System.out.println("<== User Win ==> \n User Choice : Paper\n System Choice : Rock");
+        }
+        else if(userChoice == 2 && systemChoice == 1){
+            System.out.println("<== User Win ==> \n User Choice : Scissor\n System Choice : Paper");
+        }
+        else{
+            System.out.println("Enter Valid Choice");
+        }
+    }
+}

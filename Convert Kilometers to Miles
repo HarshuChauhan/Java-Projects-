@@ -1,0 +1,11 @@
+package Basics;
+import java.util.Scanner;
+public class KMtoMiles {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of kilometers: ");
+        double km = sc.nextDouble();
+        Double miles = km / 1.609344;
+        System.out.println("The number of miles is: " + miles);
+    }    
+}

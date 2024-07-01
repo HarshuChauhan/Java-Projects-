@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class C_To_F {
+    static double CtoF(double C){
+        return (C*9/5)+32;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Temperature in Celcius :");
+        double celcius = sc.nextDouble();
+        System.out.println("The Temperature in Fahrenheit is : "+CtoF(celcius));
+    }
+}
